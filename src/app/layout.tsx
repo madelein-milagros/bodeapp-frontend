@@ -8,7 +8,7 @@ export const metadata = {
   description: 'Sistema de control de inventario y ventas',
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
       <body className={outfit.className}>{children}</body>
