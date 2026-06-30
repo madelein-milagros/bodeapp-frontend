@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-color1: #2b0c3b;
+  --color-color2: #4f143d;
+  --color-color3: #825257;
+  --color-color4: #a7857d;
+  --color-color5: #b4a29a;
+  --color-background: #faf6f4;
+  --color-foreground: #2b0c3b;
+}
+
+:root {
+  --color1: #2b0c3b;
+  --color2: #4f143d;
+  --color3: #825257;
+  --color4: #a7857d;
+  --color5: #b4a29a;
+  --background: #faf6f4;
+  --foreground: #2b0c3b;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@utility gradient-primary {
+  background: linear-gradient(135deg, var(--color1) 0%, var(--color2) 60%, var(--color3) 100%);
+}
+
+@utility gradient-secondary {
+  background: linear-gradient(135deg, var(--color2) 0%, var(--color3) 100%);
+}
+
+@utility shadow-custom {
+  box-shadow: 0 20px 60px rgba(43, 12, 59, 0.08);
+}
+
+@utility shadow-card {
+  box-shadow: 0 4px 25px rgba(79, 20, 61, 0.06);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-fadeIn {
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@utility hover-lift {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(43, 12, 59, 0.25);
+  }
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color3);
+}
