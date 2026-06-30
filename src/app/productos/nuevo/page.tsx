@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { 
   ArrowLeft, Store, Package, FileText, 
   CircleDollarSign, Hash, CheckCircle2, 
-  X, Loader2, Sparkles 
+  X, Loader2, Sparkles, AlertCircle 
 } from 'lucide-react';
 
 export default function NuevoProductoPage() {
